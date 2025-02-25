@@ -3,7 +3,6 @@ package br.com.fiap.spring_mvc.dto;
 import br.com.fiap.spring_mvc.model.Categoria;
 import jakarta.validation.constraints.*;
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
 
 import java.math.BigDecimal;
 
