@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Livro</title>
+    <link th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}" defer></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
     <div th:replace="~{fragments/header :: header}"></div>
-    <div>
+    <div th:class="main_content">
         <form method="post" th:action="@{cadastrar}" th:object="${livroRequest}">
             <h2>Cadastro de Livro</h2>
             <br>
             <table>
                 <tr>
-                    <td>Título:</td>
+                    <td>Título: </td>
                     <td><input type="text" th:field="*{titulo}"></td>
                 </tr>
                 <tr>
-                    <td>Autor:</td>
+                    <td>Autor: </td>
                     <td><input type="text" th:field="*{autor}"></td>
                 </tr>
                 <tr>
-                    <td>Categoria:</td>
+                    <td>Categoria: </td>
                     <td>
                         <select name="categoria" th:field="*{categoria}">
                             <option name="ROMANCE" value="ROMANCE">Romance</option>
@@ -30,11 +33,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Preço:</td>
+                    <td>Preço: </td>
                     <td><input type="text" th:field="*{preco}"></td>
                 </tr>
                 <tr>
-                    <td>ISBN:</td>
+                    <td>ISBN: </td>
                     <td><input type="text" th:field="*{isbn}"></td>
                 </tr>
                 <tr><td colspan="2"><input type="submit" value="Cadastrar"></td></tr>
