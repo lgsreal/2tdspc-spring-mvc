@@ -22,7 +22,7 @@ public class HelloController {
         return mv;
     }
 
-    @GetMapping("/livro")
+    @GetMapping("/livros")
     public ModelAndView livro() {
         Livro livro = new Livro();
         livro.setAutor("Homero");
